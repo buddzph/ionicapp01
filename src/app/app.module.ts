@@ -8,13 +8,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
+import { ParallaxHeaderDirective } from '../directives/parallax-header/parallax-header';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     AboutPage,
-    ContactPage
+    ContactPage,
+    ParallaxHeaderDirective
   ],
   imports: [
     BrowserModule,

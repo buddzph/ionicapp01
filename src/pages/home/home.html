@@ -11,8 +11,62 @@
 	</ion-navbar>
 </ion-header>
 
-<ion-content padding>
-	<p>
-		I am the home page
-	</p>
-</ion-content>
+<ion-content fullscreen parallax-header>
+ 
+		<div class="header-image"></div>
+	 
+		<div class="main-content">
+	 
+			<ion-segment [(ngModel)]="category">
+				<ion-segment-button value="gear">
+					Gear
+				</ion-segment-button>
+				<ion-segment-button value="clothing">
+					Clothing
+				</ion-segment-button>
+				<ion-segment-button value="nutrition">
+					Nutrition
+				</ion-segment-button>
+			</ion-segment>
+	 
+			<ion-card *ngFor="let card of cards">
+	 
+			  <ion-item>
+				<ion-avatar item-left>
+				  <img src="https://i.imgur.com/I80W1Q0.png" />
+				</ion-avatar>
+				<h2>Josh Morony</h2>
+				<p>November 5, 1955</p>
+			  </ion-item>
+	 
+			  <img src="https://i.pinimg.com/originals/12/c7/b5/12c7b54922aa7655344e5b705c327f6f.jpg" />
+	 
+			  <ion-card-content>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+			  </ion-card-content>
+	 
+			  <ion-row>
+				<ion-col>
+				  <button ion-button icon-left clear small>
+					<ion-icon name="thumbs-up"></ion-icon>
+					<div>12 Likes</div>
+				  </button>
+				</ion-col>
+				<ion-col>
+				  <button ion-button icon-left clear small>
+					<ion-icon name="text"></ion-icon>
+					<div>4 Comments</div>
+				  </button>
+				</ion-col>
+				<ion-col center text-center>
+				  <ion-note>
+					11h ago
+				  </ion-note>
+				</ion-col>
+			  </ion-row>
+	 
+			</ion-card>
+	 
+		</div>
+	 
+	</ion-content>

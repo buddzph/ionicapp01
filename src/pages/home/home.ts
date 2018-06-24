@@ -6,9 +6,11 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+	cards: any;
+	category: string = 'gear';
 
-  constructor(public navCtrl: NavController) {
-
-  }
+	constructor(public navCtrl: NavController) {
+		this.cards = new Array(10);
+	}
 
 }
