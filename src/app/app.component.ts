@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
 @Component({
   templateUrl: 'app.html'
 })
@@ -30,7 +31,15 @@ export class MyApp {
 
   openPage(p) {
     // console.log('Page: ', p);
-    this.nav.setRoot(p.title);
-  } 
+    this.nav.setRoot(p.component);
+  }
+
+  navHome() {
+    this.nav.setRoot(HomePage);
+  }
+
+  navContact() {
+    this.nav.setRoot(ContactPage);
+  }
 }
 
